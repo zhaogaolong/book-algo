@@ -1,11 +1,13 @@
 # 股票问题
 
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/
-- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/
+| 问题名称 | 链接                                                                                   |
+| -------- | -------------------------------------------------------------------------------------- |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/                      |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/                   |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/        |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/ |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/                  |
+| 股票买卖 | https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/                   |
 
 ---
 
@@ -13,6 +15,7 @@
 
 > https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
 
+要求：只能交易一次（买+卖）
 思路：
 
 - `dp0` 代表手里有钱，没股票
@@ -213,6 +216,12 @@ func maxProfit(k int, prices []int) int {
         dp1[i] = math.MinInt64
     }
     for _, p := range prices{
+
+        /*
+        为什么是  i=k i--?
+        1. 首先计算出 每个 p 的交易结果， p++ 嘛
+        2. 第 k 次交易依赖了 k-1 的交易, 也就是：当前是价格是 prices[i]，k-1 是使用 prices[i-1] 的交易结果，所以就形成了 k 交易依赖了 k-1 次交易的结果.
+        */
         for i := k; i >= 1; i--{
             dp0[i] = max(dp0[i], dp1[i] + p)
             dp1[i] = max(dp1[i], dp0[i-1] - p)
