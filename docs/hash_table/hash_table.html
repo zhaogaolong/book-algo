@@ -1,0 +1,400 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>hash table · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../tree/binary-tree.html" />
+    
+    
+    <link rel="prev" href="../linked-list/链表操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linked-list/链表操作.html">
+            
+                <a href="../linked-list/链表操作.html">
+            
+                    
+                    链表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="hash_table.html">
+            
+                <a href="hash_table.html">
+            
+                    
+                    hash table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tree/binary-tree.html">
+            
+                <a href="../tree/binary-tree.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../DP/">
+            
+                <a href="../DP/">
+            
+                    
+                    DP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../DP/股票问题.md">
+            
+                <span>
+            
+                    
+                    股票问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../DP/最优子问题.html">
+            
+                <a href="../DP/最优子问题.html">
+            
+                    
+                    最优子问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >hash table</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hash-table">hash table</h1>
+<table>
+<thead>
+<tr>
+<th>&#x95EE;&#x9898;&#x540D;&#x79F0;</th>
+<th>&#x94FE;&#x63A5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. &#x4E24;&#x6570;&#x4E4B;&#x548C;</td>
+<td><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank">https://leetcode-cn.com/problems/two-sum/</a></td>
+</tr>
+<tr>
+<td>242. &#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;</td>
+<td><a href="https://leetcode-cn.com/problems/valid-anagram/" target="_blank">https://leetcode-cn.com/problems/valid-anagram/</a></td>
+</tr>
+<tr>
+<td>49. &#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#x5206;&#x7EC4;</td>
+<td><a href="https://leetcode-cn.com/problems/group-anagrams/" target="_blank">https://leetcode-cn.com/problems/group-anagrams/</a></td>
+</tr>
+<tr>
+<td>169. &#x591A;&#x6570;&#x5143;&#x7D20;</td>
+<td><a href="https://leetcode-cn.com/problems/majority-element/" target="_blank">https://leetcode-cn.com/problems/majority-element/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-&#x4E24;&#x4E4B;&#x548C;">1 &#x4E24;&#x4E4B;&#x548C;</h2>
+<pre><code class="lang-golang"><span class="hljs-keyword">func</span> twoSum(nums []<span class="hljs-keyword">int</span>, target <span class="hljs-keyword">int</span>) []<span class="hljs-keyword">int</span> {
+    data := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">int</span>{}
+    <span class="hljs-keyword">for</span> i, v := <span class="hljs-keyword">range</span> nums{
+        n := target - v
+        j, ok := data[n]
+        <span class="hljs-keyword">if</span> ok{
+            <span class="hljs-keyword">return</span> []<span class="hljs-keyword">int</span>{j, i}
+        }
+        data[v] = i
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<h2 id="242-&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;">242. &#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;</h2>
+<p>&#x5F02;&#x4F4D;&#x8BCD;&#xFF1A; &#x4E24;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x5B57;&#x6BCD;&#x6570;&#x91CF;&#x662F;&#x5426;&#x76F8;&#x540C;</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">func</span> isAnagram(s <span class="hljs-keyword">string</span>, t <span class="hljs-keyword">string</span>) <span class="hljs-keyword">bool</span> {
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(s) != <span class="hljs-built_in">len</span>(t){
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+    data := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">byte</span>]<span class="hljs-keyword">int</span>{}
+    <span class="hljs-keyword">for</span> i := <span class="hljs-keyword">range</span> s{
+        data[s[i]]++
+        data[t[i]]--
+    }
+
+    <span class="hljs-keyword">for</span> _, v := <span class="hljs-keyword">range</span> data{
+        <span class="hljs-keyword">if</span> v != <span class="hljs-number">0</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2 id="49-&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#x5206;&#x7EC4;">49. &#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#x5206;&#x7EC4;</h2>
+<p>&#x76F8;&#x540C;&#x7684;&#x79FB;&#x4F4D;&#x8BCD;&#x5206;&#x5230;&#x4E00;&#x4E2A;&#x7EC4;&#x91CC;</p>
+<p>&#x539F;&#x7406;&#xFF1A;
+&#x9996;&#x5148;&#x628A;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x4F7F;&#x7528; sort &#x6392;&#x5E8F;&#x4F5C;&#x4E3A; key &#x653E;&#x5230; map &#x91CC;&#xFF0C; &#x7136;&#x540E; append &#x8FDB;&#x53BB;</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">func</span> groupAnagrams(strs []<span class="hljs-keyword">string</span>) [][]<span class="hljs-keyword">string</span> {
+    kind := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{}
+    <span class="hljs-keyword">for</span> _, s := <span class="hljs-keyword">range</span> strs{
+        v := []<span class="hljs-keyword">byte</span>(s)
+        sort.Slice(v, <span class="hljs-keyword">func</span>(i, j <span class="hljs-keyword">int</span>) <span class="hljs-keyword">bool</span>{ <span class="hljs-keyword">return</span> v[i] &lt; v[j] })  <span class="hljs-comment">// sort key</span>
+        kind[<span class="hljs-keyword">string</span>(v)] = <span class="hljs-built_in">append</span>(kind[<span class="hljs-keyword">string</span>(v)], s)
+    }
+    res := [][]<span class="hljs-keyword">string</span>{}
+    <span class="hljs-keyword">for</span> _, v := <span class="hljs-keyword">range</span> kind{
+        res = <span class="hljs-built_in">append</span>(res, v)
+    }
+    <span class="hljs-keyword">return</span> res
+}
+</code></pre>
+<h2 id="169-&#x591A;&#x6570;&#x5143;&#x7D20;">169. &#x591A;&#x6570;&#x5143;&#x7D20;</h2>
+<p>&#x662F;&#x6307;&#x8BE5;&#x5143;&#x7D20;&#x5728;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x8D85;&#x8FC7;&#x6570;&#x7EC4;&#x7684; 50%</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">func</span> majorityElement(nums []<span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span> {
+    data := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">int</span>{}
+    <span class="hljs-keyword">for</span> _, v := <span class="hljs-keyword">range</span> nums{
+        data[v]++
+    }
+    half := <span class="hljs-built_in">len</span>(nums)/<span class="hljs-number">2</span>
+    <span class="hljs-keyword">for</span> num,count := <span class="hljs-keyword">range</span> data{
+        <span class="hljs-keyword">if</span> count &gt; half{
+            <span class="hljs-keyword">return</span> num
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../linked-list/链表操作.html" class="navigation navigation-prev " aria-label="Previous page: 链表操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../tree/binary-tree.html" class="navigation navigation-next " aria-label="Next page: 二叉树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"hash table","level":"1.3","depth":1,"next":{"title":"二叉树","level":"1.4","depth":1,"path":"tree/binary-tree.md","ref":"tree/binary-tree.md","articles":[]},"previous":{"title":"链表操作","level":"1.2","depth":1,"path":"linked-list/链表操作.md","ref":"linked-list/链表操作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles.css"}},"file":{"path":"hash_table/hash_table.md","mtime":"2021-03-06T03:42:32.140Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:46:26.244Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

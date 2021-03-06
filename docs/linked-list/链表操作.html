@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>链表操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../hash_table/hash_table.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="链表操作.html">
+            
+                <a href="链表操作.html">
+            
+                    
+                    链表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../hash_table/hash_table.html">
+            
+                <a href="../hash_table/hash_table.html">
+            
+                    
+                    hash table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tree/binary-tree.html">
+            
+                <a href="../tree/binary-tree.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../DP/">
+            
+                <a href="../DP/">
+            
+                    
+                    DP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../DP/股票问题.md">
+            
+                <span>
+            
+                    
+                    股票问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../DP/最优子问题.html">
+            
+                <a href="../DP/最优子问题.html">
+            
+                    
+                    最优子问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >链表操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x94FE;&#x8868;&#x64CD;&#x4F5C;">&#x94FE;&#x8868;&#x64CD;&#x4F5C;</h1>
+<table>
+<thead>
+<tr>
+<th>&#x95EE;&#x9898;&#x540D;&#x79F0;</th>
+<th>&#x94FE;&#x63A5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x94FE;&#x8868;&#x7FFB;&#x8F6C;</td>
+<td><a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank">https://leetcode-cn.com/problems/reverse-linked-list/</a></td>
+</tr>
+<tr>
+<td>&#x94FE;&#x8868;&#x76F8;&#x90BB;&#x4E24;&#x8282;&#x70B9;&#x8C03;&#x6362;</td>
+<td><a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/submissions/" target="_blank">https://leetcode-cn.com/problems/swap-nodes-in-pairs/submissions/</a></td>
+</tr>
+<tr>
+<td>&#x73AF;&#x5F62;&#x94FE;&#x8868;</td>
+<td><a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank">https://leetcode-cn.com/problems/linked-list-cycle/</a></td>
+</tr>
+<tr>
+<td>&#x73AF;&#x5F62;&#x94FE;&#x8868;-II</td>
+<td><a href="https://leetcode-cn.com/problems/coin-change-2/" target="_blank">https://leetcode-cn.com/problems/coin-change-2/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x94FE;&#x8868;&#x7FFB;&#x8F6C;">&#x94FE;&#x8868;&#x7FFB;&#x8F6C;</h2>
+<ol>
+<li>&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;</li>
+</ol>
+<pre><code class="lang-golang"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> reverseList(head *ListNode) *ListNode {
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-keyword">var</span> (
+        pre *ListNode
+        curr *ListNode
+    )
+    curr = head
+    <span class="hljs-keyword">for</span> curr != <span class="hljs-literal">nil</span> {
+        old := curr.Next
+        curr.Next = pre
+        pre = curr
+        curr = old
+    }
+    <span class="hljs-keyword">return</span> pre
+}
+</code></pre>
+<ol>
+<li>&#x9012;&#x5F52;&#x5B9E;&#x73B0;</li>
+</ol>
+<pre><code class="lang-golang"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> reverseList(head *ListNode) *ListNode {
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-keyword">return</span> dfs(head, <span class="hljs-literal">nil</span>)
+}
+
+<span class="hljs-keyword">func</span> dfs(head, next *ListNode) *ListNode{
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> next
+    }
+    newHead := head.Next
+    head.Next = next
+    <span class="hljs-keyword">return</span> dfs(newHead, head)
+}
+</code></pre>
+<h2 id="&#x94FE;&#x8868;&#x76F8;&#x90BB;&#x4E24;&#x8282;&#x70B9;&#x8C03;&#x6362;">&#x94FE;&#x8868;&#x76F8;&#x90BB;&#x4E24;&#x8282;&#x70B9;&#x8C03;&#x6362;</h2>
+<blockquote>
+<p><a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/submissions/" target="_blank">https://leetcode-cn.com/problems/swap-nodes-in-pairs/submissions/</a></p>
+</blockquote>
+<pre><code class="lang-go"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> swapPairs(head *ListNode) *ListNode {
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span> || head.Next == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> head
+    }
+    n := head.Next
+    head.Next = swapPairs(head.Next.Next)
+    n.Next = head
+    <span class="hljs-keyword">return</span> n
+}
+</code></pre>
+<h2 id="&#x94FE;&#x8868;&#x662F;&#x5426;&#x6709;&#x73AF;">&#x94FE;&#x8868;&#x662F;&#x5426;&#x6709;&#x73AF;</h2>
+<blockquote>
+<p><a href="https://leetcode-cn.com/problems/linked-list-cycle/submissions/" target="_blank">https://leetcode-cn.com/problems/linked-list-cycle/submissions/</a></p>
+</blockquote>
+<pre><code class="lang-go"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> hasCycle(head *ListNode) <span class="hljs-keyword">bool</span> {
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span> || head.Next == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+    slow, fast := head, head.Next
+    <span class="hljs-keyword">for</span> fast != slow{
+        <span class="hljs-keyword">if</span> fast == <span class="hljs-literal">nil</span> || fast.Next == <span class="hljs-literal">nil</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+        fast = fast.Next.Next
+        slow = slow.Next
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2 id="&#x73AF;&#x94FE;&#x8868;-ii">&#x73AF;&#x94FE;&#x8868; II</h2>
+<blockquote>
+<p><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/" target="_blank">https://leetcode-cn.com/problems/linked-list-cycle-ii/</a></p>
+</blockquote>
+<pre><code class="lang-go">
+<span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> detectCycle(head *ListNode) *ListNode {
+    <span class="hljs-keyword">if</span> head == <span class="hljs-literal">nil</span> || head.Next == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-comment">// &#x540C;&#x65F6;&#x51FA;&#x53D1;</span>
+    fast, slow := head, head
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x6709;&#x73AF;</span>
+    <span class="hljs-keyword">for</span>{
+        <span class="hljs-keyword">if</span> fast == <span class="hljs-literal">nil</span> || fast.Next == <span class="hljs-literal">nil</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+        }
+        slow = slow.Next
+        fast = fast.Next.Next
+        <span class="hljs-keyword">if</span> slow == fast{
+            <span class="hljs-keyword">break</span>
+        }
+    }
+    <span class="hljs-comment">// &#x73AF;&#x5728;&#x90A3;&#x4E2A;&#x4F4D;&#x7F6E;</span>
+    fast = head
+    <span class="hljs-keyword">for</span> fast != slow{
+        fast = fast.Next
+        slow = slow.Next
+    }
+    <span class="hljs-keyword">return</span> fast
+}
+</code></pre>
+<h2 id="&#x94FE;&#x8868;&#x5408;&#x5E76;">&#x94FE;&#x8868;&#x5408;&#x5E76;</h2>
+<blockquote>
+<p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/submissions/" target="_blank">https://leetcode-cn.com/problems/merge-two-sorted-lists/submissions/</a></p>
+</blockquote>
+<pre><code class="lang-go"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */</span>
+<span class="hljs-keyword">func</span> mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+    <span class="hljs-keyword">if</span> l1 == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> l2
+    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> l2 == <span class="hljs-literal">nil</span>{
+        <span class="hljs-keyword">return</span> l1
+    }
+    <span class="hljs-keyword">if</span> l1.Val &lt; l2.Val{
+        l1.Next = mergeTwoLists(l1.Next, l2)
+        <span class="hljs-keyword">return</span> l1
+    }
+    l2.Next = mergeTwoLists(l1, l2.Next)
+    <span class="hljs-keyword">return</span> l2
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../hash_table/hash_table.html" class="navigation navigation-next " aria-label="Next page: hash table">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"链表操作","level":"1.2","depth":1,"next":{"title":"hash table","level":"1.3","depth":1,"path":"hash_table/hash_table.md","ref":"hash_table/hash_table.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles.css"}},"file":{"path":"linked-list/链表操作.md","mtime":"2021-03-06T03:42:32.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:46:26.244Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
